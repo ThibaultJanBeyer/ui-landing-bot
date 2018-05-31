@@ -177,7 +177,12 @@ This will display two buttons. One with the text `cat` and the other one reading
 # Classes
 | name | trigger |
 |--- |--- |
-@Todo: write classes
+|.uilb |added to the initialization node on create |
+|.uilb-container |is a container that holds the messages, it is used to add pseudoelements as the speech bubble arror and the bot/user face. It will also start with an opacity of 0 and a translate in order to create this “fly-in” animation |
+|.uilb-message |is added to the container of the actual message |
+|.human |is added to the container and the message of the human speech bubble |
+|.no-icon |you can use this custom class to hide the bot/user icon |
+|.fill-img |you can use this custom class to have this message element covering the whole speech bubble |
 
 # Have Fun!
 
