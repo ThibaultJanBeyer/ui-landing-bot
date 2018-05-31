@@ -29,7 +29,7 @@ https://codepen.io/ThibaultJanBeyer/pen/NzPVVX?editors=0110
 # Browser Support
 
 It works on all the latest browsers. However, as I’m using native classes other ES6 functionality:  
-- >=Edge 16 
+- \>=Edge 16 
 
 # Why?
 
