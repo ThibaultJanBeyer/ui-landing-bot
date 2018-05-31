@@ -50,26 +50,124 @@ If you want to add the default styling add the CSS file as well:
 
 # Usage
 
-@Todo: write usage
+Pass the node that you want to have the bot rendered into:
+```
+const uilb = new UILandingBot(document.body);
+```
+That’s it! Now you can use it to create awesome stories that get visitors hooked.
 
-## Accessibility (a11y)
+## Messages
 
-@Todo: write info
+# Syntax
+
+```
+uilb.message({options})
+```
+
+### Example:
+```
+uilb.message({
+      content: "Hey! 👋",
+      delay: 1000
+})
+```
+Will write `Hey! 👋` on behalf of the bot after 1 Second delay.  
+A message returns a promise. So, you can chain multiple messages onto another:
+
+```
+uilb.message({
+      content: "Hey! 👋",
+      cssClass: "no-icon",
+      delay: 1000
+})
+.then(ok => 
+   uilb.message({
+      content: "How are you?",
+      delay: 1000
+   })
+);
+```
+Will write `Hey! 👋` on behalf of the bot after 1 second, then after another second the bot will write `How are you?`.  
+If you want to write on behalf of the user just set `human: true` like so:
+
+```
+uilb.message({
+      content: "Hey! 👋",
+      cssClass: "no-icon",
+      delay: 1000
+})
+.then(ok => 
+   uilb.message({
+      content: "How are you?",
+      delay: 1000
+   })
+)
+.then(ok => 
+   uilb.message({
+      content: "Good",
+      human: true,
+      delay: 2000
+   })
+);
+```
+Hurray! This already makes up a fine conversation between bot and human!
+
+## Actions
+
+### Syntax
+
+```
+uilb.action({options})
+```
+
+### Example:
+
+Actions add interactivity for the user. For example you could, like this, let the user choose an answer:
+```
+uilb.message({
+      content: "Hey! 👋 <br>How are you?",
+      delay: 1000
+})
+.then(ok =>
+   uilb.action({
+      type: "button",
+      items: [
+          {
+          text: "cat",
+          value: "meow!"
+          },
+          {
+          text: "awesome",
+          value: "awesum!"
+          }
+      ]
+  })
+)
+.then( answer => console.log(answer) );
+```
+
+This will display two buttons. One with the text `cat` and the other one reading `awesome`. When the user clicks on `cat` the `console.log` will be `meow!`. Because it resolves the value of the clicked button.
+
 
 # Properties:
 | property | type | usage |
 |--- |--- |--- |
-@Todo: write
+|node |Node |The DOM element where the chat will be rendered to. |
 
 # Methods:
-| method | properties | usage |
+
+## .message
+| properties | type | usage |
 |--- |--- |--- |
-@Todo: write
+|content |String |the text that will be written. HTML can be used. |
+|cssClass |String |adds one or multiple custom CSS Class to the container and also the message |
+|delay |Integer |the time it waits before displaying the message. In Milliseconds. |
+|human |Boolean |whether or not it is the human speaking |
 
 # Classes
 | name | trigger |
 |--- |--- |
-@Todo: write
+@Todo: write classes
 
 # Have Fun!
 
