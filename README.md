@@ -168,7 +168,10 @@ This will display two buttons. One with the text `cat` and the other one reading
 | properties | type | usage |
 |--- |--- |--- |
 |type |String |the type of action. Currently only `"button"` is supported. |
-|items |String |the items that will be rendered. |
+|items |Array |the items that will be rendered. |
+|> items.text |String |the readable text inside the button. |
+|> items.value |String |the value the button. Will get resolved in promise. |
+|> items.cssClass |String |One or multiple classes that will be added to the button. |
 |cssClass |String |adds one or multiple custom CSS Class to the container and also the message |
 |delay |Integer |the time it waits before displaying the message. In Milliseconds. |
 |human |Boolean |whether or not it is the human speaking |
@@ -180,6 +183,8 @@ This will display two buttons. One with the text `cat` and the other one reading
 |.uilb |added to the initialization node on create |
 |.uilb-container |is a container that holds the messages, it is used to add pseudoelements as the speech bubble arror and the bot/user face. It will also start with an opacity of 0 and a translate in order to create this “fly-in” animation |
 |.uilb-message |is added to the container of the actual message |
+|.uilb-action |is added to action form |
+|.uilb-button |is added to the actions buttons |
 |.human |is added to the container and the message of the human speech bubble |
 |.no-icon |you can use this custom class to hide the bot/user icon |
 |.fill-img |you can use this custom class to have this message element covering the whole speech bubble |
