@@ -60,7 +60,7 @@ class UILandingBot {
   
         items.forEach(item => {
           var button = document.createElement("button");
-          button.className = `uilb-button`;
+          button.className = `uilb-button ${item.cssClass}`;
           button.type = 'button';
           button.innerHTML = item.text;
           button.addEventListener("click", () => {

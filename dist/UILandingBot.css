@@ -1,6 +1,7 @@
 .uilb {
   max-width: 600px;
   margin: auto;
+  width: calc( 100% - 100px );
 }
 
 .uilb-container {
