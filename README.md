@@ -58,7 +58,7 @@ That’s it! Now you can use it to create awesome stories that get visitors hook
 
 ## Messages
 
-# Syntax
+### Syntax
 
 ```
 uilb.message({options})
@@ -163,6 +163,16 @@ This will display two buttons. One with the text `cat` and the other one reading
 |cssClass |String |adds one or multiple custom CSS Class to the container and also the message |
 |delay |Integer |the time it waits before displaying the message. In Milliseconds. |
 |human |Boolean |whether or not it is the human speaking |
+
+## .action
+| properties | type | usage |
+|--- |--- |--- |
+|type |String |the type of action. Currently only `"button"` is supported. |
+|items |String |the items that will be rendered. |
+|cssClass |String |adds one or multiple custom CSS Class to the container and also the message |
+|delay |Integer |the time it waits before displaying the message. In Milliseconds. |
+|human |Boolean |whether or not it is the human speaking |
+
 
 # Classes
 | name | trigger |
