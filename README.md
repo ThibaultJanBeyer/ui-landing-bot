@@ -45,7 +45,7 @@ Just download the file and add it to your document:
 ```
 If you want to add the default styling add the CSS file as well:
 ```
-<link rel="stylesheet" href="https://thibaultjanbeyer.github.io/ui-landing-bot/dist/uilb.min.js">
+<link rel="stylesheet" href="https://thibaultjanbeyer.github.io/ui-landing-bot/dist/uilb.min.css">
 ```
 
 # Usage
