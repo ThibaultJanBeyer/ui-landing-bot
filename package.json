@@ -1,0 +1,36 @@
+{
+  "name": "ui-landing-bot",
+  "version": "0.1.0",
+  "description": "landbot clone written in native Vanilla JavaScript. Dead simple & no dependencies, just pure joy!",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "dist": "dist",
+    "src": "src"
+  },
+  "scripts": {
+    "start": "npm run build",
+    "uglify-css": "uglifycss ./src/UILandingBot.css > ./dist/uilb.min.css",
+    "uglify-js": "uglifyjs ./src/UILandingBot.js --compress --output ./dist/uilb.min.js",
+    "copy-files": "cpy './src/*' './dist/'",
+    "clean": "rm ./dist/*",
+    "build": "npm run clean && npm run uglify-css && npm run uglify-js && npm run copy-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThibaultJanBeyer/ui-landing-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThibaultJanBeyer/ui-landing-bot/issues"
+  },
+  "homepage": "https://github.com/ThibaultJanBeyer/ui-landing-bot#readme",
+  "dependencies": {
+    "cpy-cli": "^2.0.0",
+    "filecopy": "^4.0.1",
+    "uglify-js": "^3.3.28",
+    "uglify-js-es6": "^2.8.9",
+    "uglifycss": "0.0.29"
+  }
+}

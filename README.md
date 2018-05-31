@@ -7,9 +7,14 @@
                                          /____/                   
 
 ```
-# ui-landing-bot
+# UILandingBot
 
 landbot clone written in native Vanilla JavaScript. Dead simple &amp; no dependencies, just pure joy!
+
+# Example
+
+temporarily:
+https://codepen.io/ThibaultJanBeyer/pen/NzPVVX?editors=0110
 
 # Key Features
 
@@ -36,11 +41,11 @@ Well well, I stumbled upon the commercial tool https://www.landbot.io/ and wante
 
 Just download the file and add it to your document:
 ```
-<script src="https://thibaultjanbeyer.github.io/DragSelect/ds.min.js"></script>
+<script src="https://thibaultjanbeyer.github.io/ui-landing-bot/dist/uilb.min.js"></script>
 ```
 If you want to add the default styling add the CSS file as well:
 ```
-
+<link rel="stylesheet" href="https://thibaultjanbeyer.github.io/ui-landing-bot/dist/uilb.min.js">
 ```
 
 # Usage
@@ -64,10 +69,7 @@ If you want to add the default styling add the CSS file as well:
 # Classes
 | name | trigger |
 |--- |--- |
-|.ds-selected |On elements that are selected
-|.ds-hover |On elements that are currently hovered
-|.ds-selector |On the selector element
-|.ds-selectable |On elements that can be selected
+@Todo: write
 
 # Have Fun!
 
